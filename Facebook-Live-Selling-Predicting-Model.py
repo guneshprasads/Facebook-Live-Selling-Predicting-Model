@@ -20,3 +20,9 @@ dataset.nunique()
 duplicated_data = dataset[dataset['status_id'].duplicated() == True]
 dataset1 = dataset.drop_duplicates(subset='status_id',keep='last')
 
+#Plotting the status type
+dataset2 = dataset1.status_type.value_counts().plot(kind='bar',figsize=(10,5),title='Status type')
+dataset2.set(xlabel='status type',ylabel='count')
+
+#lets add the all the reaction
+dataset1['Total number of Reaction'] = dataset1.iloc[:,]
